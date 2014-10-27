@@ -91,8 +91,14 @@ class FlashCardDeck {
     }
 
     private void createCard() {
-        //ToDo
-        throw new NotImplementedException();
+        String question, answer;
+        System.out.println("Give a question");
+        question = reader.nextLine();
+        System.out.println("Give an answer");
+        answer = reader.nextLine();
+         cards.add(new FlashCard(question, answer));
+      
+        
     }
 
 }
