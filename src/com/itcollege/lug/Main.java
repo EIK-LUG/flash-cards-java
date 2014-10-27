@@ -1,8 +1,11 @@
 package com.itcollege.lug;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 import java.util.Scanner;
 
 
@@ -76,13 +79,20 @@ class FlashCardDeck {
     }
 
     public FlashCard getRandomCard() {
-        //ToDo
-        throw new NotImplementedException();
+    
+        int randomKaardiIndex =	new Random().nextInt(cards.size());
+        FlashCard getRandomCard = cards.get(randomKaardiIndex); 
+        
+        return getRandomCard;
+        
     }
 
     private void saveDeck() {
-        //ToDo
-        throw new NotImplementedException();
+        
+    	File FlashCard = new File("FlashCard.json");
+    	
+    	
+        //throw new NotImplementedException();
     }
 
     private void loadDeckFromJson() {
