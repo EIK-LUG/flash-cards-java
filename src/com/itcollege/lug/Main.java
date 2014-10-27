@@ -11,19 +11,23 @@ import java.util.Scanner;
 
 class FlashCard {
 
-    public FlashCard(String question, String answer) {
-        //ToDo
-        throw new NotImplementedException();
+    private String question;
+	private String answer;
+
+	public FlashCard(String question, String answer) {
+		
+    	this.question=question;
+    	this.answer=answer;
     }
 
     public String getQuestion() {
         //ToDo
-        throw new NotImplementedException();
+        
+        return this.question;
     }
 
     public String getAnswer() {
-        //ToDo
-        throw new NotImplementedException();
+        return this.answer;
     }
 
     HashMap<String, String> getRepresentation() {
@@ -101,8 +105,14 @@ class FlashCardDeck {
     }
 
     private void createCard() {
-        //ToDo
-        throw new NotImplementedException();
+        String question, answer;
+        System.out.println("Give a question");
+        question = reader.nextLine();
+        System.out.println("Give an answer");
+        answer = reader.nextLine();
+         cards.add(new FlashCard(question, answer));
+      
+        
     }
 
 }
